@@ -4,7 +4,7 @@
 	"version": "0.0.1-1",
 	"main": "lib/index.js",
 	"bin": {
-		"nscdn-storedir": "lib/cli.js"
+		"nodesite-storedir": "lib/cli.js"
 	},
 	"scripts": {
 		"build": "yarn && tsc",
