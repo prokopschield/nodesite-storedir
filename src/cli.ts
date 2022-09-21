@@ -13,10 +13,7 @@ async function main() {
 	const stats = await stat(file);
 
 	if (stats) {
-		const hash = await store(
-			file,
-			new RegExp(argv[3] || '__NSCDN_STOREDIR_EXCLUDE__')
-		);
+		const hash = await store(file);
 
 		console.log(hash);
 	} else {

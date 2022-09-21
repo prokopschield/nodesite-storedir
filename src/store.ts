@@ -25,21 +25,11 @@ export async function store_stream(filename: string): Promise<string[]> {
 	return output;
 }
 
-export function store_multiple(
-	filenames: string[],
-	exclude: RegExp
-): Promise<string[]> {
-	return Promise.all(
-		filenames
-			.filter((a) => !a.match(exclude))
-			.map((filename) => store(filename, exclude))
-	);
+export function store_multiple(filenames: string[]): Promise<string[]> {
+	return Promise.all(filenames.map(store));
 }
 
-export async function store(
-	filename: string,
-	exclude: RegExp
-): Promise<string> {
+export async function store(filename: string): Promise<string> {
 	try {
 		const stats = await stat(filename);
 
@@ -48,7 +38,7 @@ export async function store(
 		} else if (stats.isDirectory()) {
 			const list = await fs.promises.readdir(filename);
 			const files = list.map((child) => path.resolve(filename, child));
-			const children = await store_multiple(files, exclude);
+			const children = await store_multiple(files);
 
 			const record: Directory = {
 				name: path.basename(filename),
