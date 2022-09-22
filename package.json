@@ -15,7 +15,7 @@
 	"dependencies": {
 		"@prokopschield/base64": "0.1.0-1",
 		"doge-json": "^1.2.8",
-		"nsblob": "^0.2.17",
+		"nsblob-native-if-available": "^0.2.17-1",
 		"ps-std": "^0.1.6",
 		"serial-async-io": "^0.3.2"
 	},

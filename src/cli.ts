@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import nsblob from 'nsblob';
+import nsblob from 'nsblob-native-if-available';
 import { argv } from 'process';
 import { stat } from 'serial-async-io';
 
