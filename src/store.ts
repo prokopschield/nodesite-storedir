@@ -25,8 +25,14 @@ export async function store_stream(filename: string): Promise<string[]> {
 	return output;
 }
 
-export function store_multiple(filenames: string[]): Promise<string[]> {
-	return Promise.all(filenames.map(store));
+export async function store_multiple(filenames: string[]): Promise<string[]> {
+	const promises = new Array<string>();
+
+	for (const filename of filenames) {
+		promises.push(await store(filename));
+	}
+
+	return Promise.all(promises);
 }
 
 export async function store(filename: string): Promise<string> {
