@@ -24,6 +24,10 @@ async function main() {
 
 	// fix no-exit bug caused by nscdn-hashmap
 	require('nsblob').socket.close();
+
+	if (process.argv[1].includes('nodesite-storedir')) {
+		process.exit(0);
+	}
 }
 
 main();
