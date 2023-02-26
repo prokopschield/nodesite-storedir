@@ -21,6 +21,9 @@ async function main() {
 	}
 
 	nsblob.socket.close();
+
+	// fix no-exit bug caused by nscdn-hashmap
+	require('nsblob').socket.close();
 }
 
 main();
