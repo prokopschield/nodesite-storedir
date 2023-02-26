@@ -1,7 +1,7 @@
 {
 	"name": "nodesite-storedir",
 	"description": "store a directory in nsblob",
-	"version": "0.1.0-4",
+	"version": "0.1.0-5",
 	"main": "lib/index.js",
 	"bin": {
 		"nodesite-storedir": "lib/cli.js"
@@ -14,8 +14,8 @@
 	"author": "Prokop Schield",
 	"dependencies": {
 		"@prokopschield/base64": "^0.1.0-1",
-		"doge-json": "^1.2.8",
-		"nsblob-native-if-available": "^0.2.18-2",
+		"doge-json": "^1.2.10",
+		"nsblob-native-if-available": "^0.2.20-2",
 		"ps-std": "^0.1.6",
 		"serial-async-io": "^0.3.2"
 	},
