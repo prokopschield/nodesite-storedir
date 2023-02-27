@@ -1,7 +1,7 @@
 {
 	"name": "nodesite-storedir",
 	"description": "store a directory in nsblob",
-	"version": "0.1.0-8",
+	"version": "0.1.0-9",
 	"main": "lib/index.js",
 	"bin": {
 		"nodesite-storedir": "lib/cli.js"
