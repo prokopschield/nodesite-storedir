@@ -1,6 +1,6 @@
 import * as coder from '@prokopschield/base64';
 import * as Json from 'doge-json';
-import nsblob from 'nsblob-native-if-available';
+import nsblob from 'nsblob-native';
 import path from 'path';
 import { cacheFn } from 'ps-std';
 
